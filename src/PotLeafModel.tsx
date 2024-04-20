@@ -1,8 +1,10 @@
 import { useGLTF } from '@react-three/drei'
 import { Mesh } from 'three'
 
+const path = '/happy-420/pot-leaf.glb'
+
 export function PotLeafModel(props: any) {
-  const { nodes, materials } = useGLTF('/pot-leaf.glb')
+  const { nodes, materials } = useGLTF(path)
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -30,4 +32,4 @@ export function PotLeafModel(props: any) {
   )
 }
 
-useGLTF.preload('/pot-leaf.glb')
+useGLTF.preload(path)
